@@ -1,12 +1,23 @@
-export default function RootLayout({
-  children,
-}: Readonly<{
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import { FC } from "react";
+import '../styles/global.scss';
+
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+}
+
+const RootLayout: FC<RootLayoutProps> = ({children})  => {
 
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar/>
+          {children}
+        <Footer/>
+      </body>
     </html>
   );
 }
+
+export default RootLayout;

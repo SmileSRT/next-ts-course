@@ -1,11 +1,11 @@
-import '../styles/global.scss';
-import SubjectsList from '@/components/subjectsLIst';
-import Layout from '@/components/layout';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-      <Layout>
-        <SubjectsList/>
-      </Layout>
+        <div>
+          Главная
+
+          <Link href={'/subjects'}>Предметы</Link>
+        </div>
   );
 }
